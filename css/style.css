@@ -1,0 +1,1044 @@
+/*https://css-tricks.com/making-css-animations-feel-natural/*/
+
+
+/*Use of :root to set variables as described here: https://www.w3schools.com/css/css3_variables.asp*/
+:root {
+    --berry: #bd3559;
+    --red: #e65c38;
+    --orange: #f99027;
+    --yellow: #f9d349;
+    --light-green: #9ec04d;
+    --dark-green: #109e68;
+    --bee-wings: #a8d6cd;
+    --blue: #6689c3;
+    --purple: #554995;
+    --pink: #f6a5c5;
+    --brown: #a6743f;
+    --gray: #979797;
+}
+
+.red {
+    background-color: var(--red);
+}
+
+.orange {
+    background-color: var(--orange);
+}
+
+.yellow {
+    background-color: var(--yellow);
+}
+
+.light-green {
+    background-color: var(--light-green);
+}
+
+.dark-green {
+    background-color: var(--dark-green);
+    color: white;
+}
+
+.blue {
+    background-color: var(--blue);
+}
+
+.purple {
+    background-color: var(--purple);
+    color: white;
+}
+
+.pink {
+    background-color: var(--pink);
+}
+
+
+* {
+    box-sizing: border-box;
+    border: none;
+}
+
+html {
+    overflow-x: hidden;
+    /* Hide horizontal scrollbar */
+    overflow-y: scroll;
+    /* Add vertical scrollbar */
+}
+
+body,
+html {
+    min-height: 100vh;
+    margin: 0;
+}
+
+a {
+    font-weight: bold;
+}
+
+#name {
+    display: inline-flex;
+    z-index: 51;
+    position: relative;
+    padding: 15px 20px;
+}
+
+#bee {
+    height: 80px;
+    object-fit: contain;
+    align-self: flex-end;
+    animation-duration: 1s;
+    margin: 0 auto 0 auto;
+    transform-origin: bottom;
+    padding: 0 0 0 10px;
+}
+
+img {
+    max-width: 100%;
+}
+
+@font-face {
+    font-family: 'Komika-Hand';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Komika Hand'), url("C:\Users\megha\Desktop\Portfolio\typefaces\komika_hands") format('truetype');
+}
+
+@font-face {
+    font-family: 'Bakso-Sapi';
+    font-style: normal;
+    font-weight: normal;
+    src: local('BaksoSapi'), url("C:\Users\megha\Desktop\Portfolio\typefaces") format('opentype');
+}
+
+body {
+    background-image: url("../images/background-images/brown-paper.jpg");
+    background-size: contain;
+    background-repeat: repeat;
+}
+
+.background-paper {
+    position: absolute;
+    z-index: -1;
+    overflow: hidden;
+}
+
+#paper1 {
+    background: url("../images/background-images/french2.png") no-repeat;
+    background-size: cover;
+    width: 424px;
+    height: 588px;
+    top: 40px;
+    right: -75px;
+}
+
+#paper2 {
+    background: url("../images/background-images/book-and-notes.png") no-repeat;
+    background-size: cover;
+    width: 424px;
+    height: 588px;
+    top: 375px;
+    left: -75px;
+}
+
+#paper3 {
+    background: url("../images/background-images/to-do1.png") no-repeat;
+    background-size: cover;
+    width: 423px;
+    height: 368px;
+    top: 780px;
+    left: 50vw;
+    rotate: 50deg;
+}
+
+#paper4 {
+    background: url("../images/background-images/journal1.png") no-repeat;
+    background-size: cover;
+    width: 424px;
+    height: 588px;
+    top: 1200px;
+    left: -75px;
+    rotate: 90deg;
+}
+
+#paper5 {
+    background: url("../images/background-images/notebook1.png") no-repeat;
+    background-size: cover;
+    width: 424px;
+    height: 588px;
+    top: 575px;
+    right: -150px;
+    rotate: 200deg;
+}
+
+#paper6 {
+    background: url("../images/background-images/receipt1.png") no-repeat;
+    background-size: cover;
+    width: 276px;
+    height: 191px;
+    top: 1000px;
+    left: -10px;
+    rotate: 75deg;
+    z-index: 0;
+}
+
+#paper7 {
+    background: url("../images/background-images/miscellaneous.png") no-repeat;
+    background-size: cover;
+    width: 424px;
+    height: 588px;
+    top: 870px;
+    left: -200px;
+    rotate: -20deg;
+}
+
+#paper8 {
+    background: url("../images/background-images/journal2.png") no-repeat;
+    background-size: cover;
+    width: 424px;
+    height: 588px;
+    top: 50px;
+    left: -20px;
+    rotate: 255deg;
+}
+
+
+
+h1,
+h2,
+ul {
+    margin: 0;
+    font-family: 'Bakso-Sapi';
+}
+
+h2.about {
+    background-color: var(--yellow);
+}
+
+h3 {
+    margin: 0;
+    font-family: 'Komika-Hand';
+}
+
+li {
+    font-size: 20px;
+}
+
+#categories-parent li,
+.tabs li {
+    list-style-type: none;
+    text-align: center;
+    display: inline-block;
+    font-size: 27px;
+}
+
+#faves {
+    background-color: var(--bee-wings);
+    box-shadow: 0 10px 10px 2px rgba(0, 0, 0, 0.3);
+}
+
+h1 {
+    font-size: 60px;
+    display: flex;
+}
+
+p {
+    margin: 0;
+    font-family: 'Cambria';
+}
+
+main {
+    flex-grow: 1;
+}
+
+.flex-parent {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.hidden {
+    display: none;
+}
+
+#intro-name {
+    font-family: 'Bakso-Sapi';
+    font-size: 100px;
+    margin: auto;
+    text-align: center;
+    position: relative;
+    top: 35vh;
+}
+
+#categories-parent {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 50px;
+}
+
+#logo:hover,
+#pubs:hover,
+#web:hover,
+#art:hover,
+a:hover {
+    color: var(--bee-wings);
+    transition: 0.2s ease;
+    /*font-size: 30px;*/
+}
+
+#french,
+#dutch {
+    transition: transform 0.3s ease;
+}
+
+#french:hover,
+#dutch:hover {
+    color: white;
+    transition: transform 0.3s ease;
+}
+
+#logo:active,
+#pubs:active,
+#web:active,
+#art:active {
+    color: var(--bee-wings);
+}
+
+.project-title {
+    font-size: 35px;
+    box-shadow: 0 10px 10px 2px rgba(0, 0, 0, 0.3);
+    display: inline-block;
+    padding: 5px 10px;
+}
+
+
+#project-parent {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 75px;
+
+}
+
+#portfolio-parent {
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    gap: 100px;
+    height: min-content;
+}
+
+.grid-baby {
+    box-shadow: 0 10px 10px 2px rgba(0, 0, 0, 0.3);
+    min-height: 400px;
+}
+
+.container {
+    max-width: 1000px;
+    margin: auto;
+}
+
+.wrapper {
+    padding: 15px 20px;
+}
+
+.picture-padding {
+    padding: 15px;
+}
+
+.bttm-spacer {
+    padding: 0 0 10vh 0;
+}
+
+.top-spacer {
+    padding: 10vh 0 0 0;
+}
+
+
+#pubs,
+.pub-design h3 {
+    color: var(--orange);
+}
+
+#web,
+.web-design h3 {
+    color: var(--berry);
+}
+
+#art,
+.digital-art h3 {
+    color: var(--dark-green);
+}
+
+#logo,
+.logo-design h3 {
+    color: var(--purple);
+}
+
+.project-link {
+    display: inline-block;
+    background-image: url("../images/tape/tape-straight-kraft2.png");
+    background-size: 360px 60px;
+    background-position: center;
+    background-repeat: no-repeat;
+    text-align: center;
+    font-family: 'Bakso-Sapi';
+
+}
+
+#back-to-gallery {
+    display: inline-block;
+    background-image: url("../images/tape/tape-straight-kraft3.png");
+    background-size: 360px 60px;
+    background-position: center;
+    background-repeat: no-repeat;
+    text-align: center;
+}
+
+.bump-up {
+    transform: translateY(-40px);
+}
+
+#logo {
+    background-image: url("../images/tape/tape-straight-kraft3.png");
+    background-size: 220px 60px;
+    /* Resize the background image to cover the entire container */
+    background-position: center;
+    /* Center the image */
+    background-repeat: no-repeat
+}
+
+#pubs {
+    background-image: url("../images/tape/tape-straight-cream1.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 220px 60px;
+}
+
+#web {
+    background-image: url("../images/tape/tape-straight-kraft2.png");
+    background-size: 220px 60px;
+    background-position: center;
+    background-repeat: no-repeat
+}
+
+#art {
+    background-image: url("../images/tape/tape-straight-cream2.png");
+    background-size: 215px 60px;
+    background-position: center;
+    background-repeat: no-repeat
+}
+
+
+.pinback-button-scale {
+    height: 450px;
+    width: 450px;
+}
+
+.hidden {
+    display: none;
+}
+
+.visible {
+    display: grid;
+}
+
+
+
+
+.projects {
+    background-color: #ffffff;
+    text-align: center;
+    transform-origin: 50% 5%;
+    transition: transform 0.3s ease;
+}
+
+
+@media screen and (max-width: 900px) {
+    .ships-grid div:nth-child(2) img {
+        max-width: 65%
+    }
+}
+
+
+.crooked3 {
+    -ms-transform: rotate(3deg);
+    -moz-transform: rotate(3deg);
+    -webkit-transform: rotate(3deg);
+    -o-transform: rotate(3deg);
+    transform: rotate(3deg);
+}
+
+.crooked5 {
+    -ms-transform: rotate(5deg);
+    -moz-transform: rotate(5deg);
+    -webkit-transform: rotate(5deg);
+    -o-transform: rotate(5deg);
+    transform: rotate(5deg);
+}
+
+.crooked-2 {
+    -ms-transform: rotate(-2deg);
+    -moz-transform: rotate(-2deg);
+    -webkit-transform: rotate(-2deg);
+    -o-transform: rotate(-2deg);
+    transform: rotate(-2deg);
+}
+
+
+.jostle {
+    transform: rotate(9deg);
+    box-shadow: 10px 10px 10px 2px rgba(0, 0, 0, 0.3);
+}
+
+.tape1 {
+    width: 200px;
+    display: block;
+    position: absolute;
+    /* Transform looks at the element itself and not the parent. */
+    transform: translateY(-25%) translateX(-20%);
+    z-index: 50;
+}
+
+.tape2 {
+    width: 400px;
+    rotate: 90deg;
+    opacity: 80%;
+    display: block;
+    position: absolute;
+    /* Transform looks at the element itself and not the parent. */
+    transform: translateX(70%) translateY(275%);
+}
+
+.tape3 {
+    width: 275px;
+    opacity: 80%;
+    rotate: 20deg;
+    display: block;
+    position: absolute;
+    right: 0;
+    /* Transform looks at the element itself and not the parent. */
+    transform: translateY(-40%) translateX(10%);
+}
+
+.portfolio-details {
+    background-color: var(--yellow);
+}
+
+.portfolio-list {
+    font-family: 'Komika Hand';
+    color: white;
+    padding: 40px 20px 20px 20px;
+}
+
+p.about {
+    background-color: var(--bee-wings);
+}
+
+
+
+/*slideshow*/
+/* Slideshow container */
+.slideshow-container {
+    max-width: 1500px;
+    position: relative;
+    margin: auto;
+}
+
+/* Hide the images by default */
+.mySlides {
+    display: none;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+    position: absolute;
+    display: block;
+    right: 0;
+    top: 50%;
+    cursor: pointer;
+    width: auto;
+    margin-top: -22px;
+    padding: 10px;
+    color: white;
+    font-family: "Komika-Hand";
+    font-weight: bold;
+    font-size: 25px;
+    user-select: none;
+    z-index: 51;
+
+}
+
+.prev {
+    border-radius: 0 3px 3px 0;
+    transform: translateY(-5%) translateX(-10%);
+    left: 0px;
+
+}
+
+/* Position the "next button" to the right */
+.next {
+    right: 0px;
+    transform: translateY(-5%) translateX(130%);
+    border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+    color: var(--bee-wings);
+}
+
+/* Caption text */
+.text {
+    color: #f2f2f2;
+    font-family: 'Komika-Hand';
+    font-size: 20px;
+    padding: 8px 12px;
+    position: absolute;
+    width: 100%;
+    text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+    display: none;
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+    align-self: flex-end;
+    animation-duration: 1s;
+    margin: 0 auto 0 auto;
+    transform-origin: bottom;
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: var(--pink);
+    border-radius: 50%;
+    display: inline-block;
+    bottom: -20px;
+    transition: 0.2s ease;
+}
+
+
+.active-bounce-down {
+    animation-name: active-bounce-down;
+    animation-timing-function: ease;
+}
+
+@keyframes active-bounce-down {
+    0% {
+        transform: scale(1, 1);
+    }
+
+    10% {
+        transform: scale(1.1, .9);
+    }
+
+    30% {
+        transform: scale(.9, 1.5);
+    }
+
+    50% {
+        transform: scale(1.05, .95);
+    }
+
+    57% {
+        transform: scale(1, 1);
+    }
+
+    64% {
+        transform: scale(1, 1);
+    }
+
+    100% {
+        transform: scale(1, 1);
+    }
+}
+
+
+.active-bounce {
+    animation-name: active-bounce;
+    animation-timing-function: ease;
+}
+
+@keyframes active-bounce {
+    0% {
+        transform: scale(1, 1) translateY(0);
+    }
+
+    10% {
+        transform: scale(1.1, .9) translateY(0);
+    }
+
+    30% {
+        transform: scale(.9, 1.1) translateY(-10px);
+    }
+
+    50% {
+        transform: scale(1.05, .95) translateY(4px);
+    }
+
+    57% {
+        transform: scale(1, 0.975) translateY(-2px);
+    }
+
+    64% {
+        transform: scale(1, 1) translateY(0);
+    }
+
+    100% {
+        transform: scale(1, 1) translateY(0);
+    }
+}
+
+
+.dot-active,
+.dot:hover {
+    background-color: var(--yellow);
+}
+
+/* Fading animation */
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from {
+        opacity: .4
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+
+
+
+
+
+
+
+
+/* Page content https://www.w3schools.com/howto/howto_js_sticky_header.asp*/
+.content {
+    padding: 16px;
+}
+
+/* The sticky class is added to the header with JS when it reaches its scroll position */
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: rgb(247, 48, 48, 0);
+    z-index: 50;
+}
+
+footer {
+    position: static;
+    width: 100%;
+    z-index: 50;
+    background-color: var(--yellow);
+    bottom: 0;
+}
+
+/* Add some top padding to the page content to prevent sudden quick movement (as the header gets a new position at the top of the page (position:fixed and top:0) */
+.sticky+.content {
+    padding-top: 102px;
+}
+
+
+
+
+/* https://codepen.io/jayenne/pen/qrKmer PUSH PIN */
+.pushpin {
+    margin: auto;
+    position: relative;
+    width: 30px;
+    height: 52.5px;
+    z-index: 1;
+    top: 15px;
+    transition: transform 0.3s ease;
+}
+
+.projects .pushpin {
+    top: -30px;
+}
+
+
+
+.pushpin.tilted {
+    -ms-transform: rotate(9deg);
+    -moz-transform: rotate(9deg);
+    -webkit-transform: rotate(9deg);
+    -o-transform: rotate(9deg);
+    transform: rotate(9deg);
+}
+
+.pinhead {
+    width: 75%;
+    height: 20%;
+    border-radius: 100%;
+    position: relative;
+    left: 12.5%;
+    top: 0;
+    background: var(--light-green);
+}
+
+.pinhead:after {
+    /*once was red*/
+    background: #ffffff;
+    content: '';
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    position: absolute;
+    top: -30%;
+    left: 0;
+    background: var(--dark-green);
+}
+
+.pinbase {
+    width: 100%;
+    height: 25%;
+    border-radius: 100%;
+    position: relative;
+    left: 0;
+    top: 30%;
+    background: var(--dark-green);
+}
+
+.pinbase:after {
+    /*once was red*/
+    content: '';
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    position: absolute;
+    background: #ffffff;
+    top: -30%;
+    left: 0;
+    background: var(--light-green);
+}
+
+.pinshaft {
+    height: 30%;
+    width: 50%;
+    position: relative;
+    border-radius: 0;
+    top: -30%;
+    left: 25%;
+    background: var(--light-green);
+
+}
+
+.pinshaft:after {
+    content: '';
+    width: 100%;
+    height: 50%;
+    border-radius: 50%;
+    position: absolute;
+    top: 75%;
+}
+
+.pinpoint {
+    display: block;
+    background: #999;
+    height: 70%;
+    width: 14%;
+    position: absolute;
+    border-radius: 0 0 20% 20%;
+    z-index: -50;
+    bottom: 0;
+    left: 43%;
+    box-shadow: 0 10px 20px 7px rgba(0, 0, 0, 0.2);
+}
+
+
+a {
+    text-decoration: none;
+    color: #000000;
+}
+
+
+
+
+/* Tabs from https://css-tricks.com/tabs-with-round-out-borders/*/
+.tabs li {
+    /* Makes a horizontal row */
+    float: right;
+    display: flex;
+    /* So the psueudo elements can be
+       abs. positioned inside */
+    position: relative;
+    transition: 0.5s ease;
+
+}
+
+.tabs a {
+    /* Make them block level
+       and only as wide as they need */
+    /*float: left;*/
+    padding: 10px 30px;
+    text-decoration: none;
+    /* Default colors */
+    color: #000000;
+    background: var(--pink);
+    /* Only round the top corners */
+    -webkit-border-bttm-left-radius: 15px;
+    -webkit-border-bttm-right-radius: 15px;
+    -moz-border-radius-bttmleft: 15px;
+    -moz-border-radius-bttmright: 15px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+.tabs li a {
+    align-self: flex-end;
+    animation-duration: 1s;
+    margin: 0 auto 0 auto;
+    transform-origin: top;
+}
+
+.tabs a:hover {
+    background: #f9d349;
+    text-align: center;
+    padding: 15px 30px;
+    transition: 0.5s;
+}
+
+
+.tabs .active {
+    /* Highest, active tab is on top */
+    z-index: 10;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tabs .active a {
+    /* Colors when tab is active */
+    background: #f9d349;
+    text-align: center;
+    padding: 15px 30px;
+    transition: 0.5s;
+}
+
+.tabs li:before,
+.tabs li:after,
+.tabs li a:before,
+.tabs li a:after {
+    /* All pseudo elements are 
+       abs. positioned and on bottom */
+    position: absolute;
+    bottom: 0;
+}
+
+/* Only the first, last, and active
+     tabs need pseudo elements at all */
+.tabs li:last-child:after,
+.tabs li:last-child a:after,
+.tabs li:first-child:before,
+.tabs li:first-child a:before,
+.tabs .active:after,
+.tabs .active:before,
+.tabs .active a:after,
+.tabs .active a:before {
+    content: "";
+}
+
+.tabs .active:before,
+.tabs .active:after {
+    opacity: 0;
+    /* Squares below circles */
+    z-index: 97;
+}
+
+/* Squares */
+.tabs li:before,
+.tabs li:after {
+    opacity: 0;
+    width: 10px;
+    height: 10px;
+}
+
+.tabs li:before {
+    left: -10px;
+}
+
+.tabs li:after {
+    right: -10px;
+}
+
+/* Circles */
+.tabs li a:after,
+.tabs li a:before {
+    width: 20px;
+    height: 20px;
+
+    /* Circles are circular */
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    background: rgb(247, 48, 48);
+    opacity: 0;
+
+    /* Circles over squares */
+    z-index: 98;
+}
+
+.tabs .active a:after,
+.tabs .active a:before {
+    background: #85c4dd;
+}
+
+/* First and last tabs have different
+     outside color needs */
+.tabs li:first-child.active a:before,
+.tabs li:last-child.active a:after {
+    background: rgb(194, 227, 30);
+}
+
+.tabs li a:before {
+    left: -20px;
+}
+
+.tabs li a:after {
+    right: -20px;
+}
+
+
+
+
+
+
+/* https://www.w3schools.com/howto/howto_css_custom_scrollbar.asp */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--light-green);
+    opacity: 0;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--dark-green);
+    border-radius: 8px;
+
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--yellow);
+}
+
+::-webkit-scrollbar-corner {
+    background: var(--light-green);
+}
