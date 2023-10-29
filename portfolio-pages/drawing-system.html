@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en-CAN">
+
+<head>
+    <title>Meghan Rennie</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+    <script src="../js/scripts.js"></script>
+</head>
+
+<body>
+    <header class="header">
+        <ul class="tabs group sticky">
+            <li><a href="../about.html">About</a></li>
+            <li class="active"><a href="../projects.html">Projects</a></li>
+            <li><a href="../music.html">Music</a></li>
+        </ul>
+        <div id="name">
+            <a href="../index.html">
+                <h1>Meghan Rennie <img id="bee" src="..\images\bee-transparent.png"></h1>
+            </a>
+        </div>
+    </header>
+    <div class="container content">
+        <main>
+            <div id="portfolio-parent">
+                <div class="wrapper bump-up">
+                    <div class="pushpin tilted">
+                        <div class="pinhead"></div>
+                        <div class="pinbase"></div>
+                        <div class="pinshaft"></div>
+                        <div class="pinpoint"></div>
+                    </div>
+                    <h2 class="crooked-2 pink project-title">Generative Art Drawing System</h2>
+                    <ul class="wrapper portfolio-list">
+                        <li>Medium: Website</li>
+                        <li>Software used: Processing</li>
+                        <li>Project type: School assignment</li>
+                        <li>Year: 2021</li>
+                    </ul>>
+                </div>
+                <div class="wrapper" style="height:min-content">
+                    <img class="tape1" src="..\images\tape\tape-corner-white.png">
+                    <!-- https://www.w3schools.com/howto/howto_js_slideshow.asp Slideshow container -->
+                    <div class="slideshow-container">
+
+                        <!-- Full-width images with number and caption text -->
+                        <div class="mySlides fade" style="display: block;">
+                            <div class="numbertext">1 / 5</div>
+                            <img src="..\images\drawing-system\drawing-system1.jpg" style="width:100%">
+                        </div>
+
+                        <div class="mySlides fade">
+                            <div class="numbertext">2 / 5</div>
+                            <img src="..\images\drawing-system\drawing-system2.jpg" style="width:100%">
+                        </div>
+
+                        <div class="mySlides fade">
+                            <div class="numbertext">3 / 5</div>
+                            <img src="..\images\drawing-system\drawing-system3.jpg" style="width:100%">
+                        </div>
+
+                        <div class="mySlides fade">
+                            <div class="numbertext">4 / 5</div>
+                            <img src="..\images\drawing-system\drawing-system4.jpg" style="width:100%">
+                        </div>
+
+                        <div class="mySlides fade">
+                            <div class="numbertext">5 / 5</div>
+                            <img src="..\images\drawing-system\drawing-system5.jpg" style="width:100%">
+                        </div>
+
+                        <!-- Next and previous buttons -->
+                        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                    </div>
+                    <br>
+                    <br>
+                    <br>
+                    <!-- The dots/circles -->
+                    <div style="text-align:center" id="dot-box">
+                        <span class="dot dot-active active-bounce" onclick="currentSlide(1)"></span>
+                        <span class="dot" onclick="currentSlide(2)"></span>
+                        <span class="dot" onclick="currentSlide(3)"></span>
+                        <span class="dot" onclick="currentSlide(4)"></span>
+                        <span class="dot" onclick="currentSlide(5)"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="wrapper bump-up">
+                <p class="portfolio-details wrapper"> Meghan created this Processing sketch in response to a project
+                    prompt. The prompt asked for a drawing system in which the viewer
+                    could interact with the sketch to create different images. Instead of coding
+                    different viewer-controlled brushes to allow "traditional drawing" within the sketch, Meghan
+                    coded a few malleable bezier curves that are influenced by the mouse's position. These
+                    funky bending lines respond to mouse movements, but still conform to some of their own
+                    parameters (e.g., the coordinates of their anchor points, etc.). This results in the
+                    creation of abstract art images that are half created by the viewer's own intentions and
+                    choices, and half created by the code's response to the user's actions. The viewer can
+                    slowly learn to understand the code's behaviour as they play within the sketch, but there
+                    is still some surprise and whimsy inherent to the process and its end result. The images above are
+                    example pieces Meghan made with the sketch.
+                </p>
+                <br>
+                <a class="wrapper bump-up" href="../projects.html">
+                    <h2 id="back-to-gallery" class="wrapper">return to gallery</h2>
+                </a>
+            </div>
+
+        </main>
+    </div>
+
+</body>
