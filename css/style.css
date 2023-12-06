@@ -38,12 +38,22 @@
     color: white;
 }
 
+.bee-wings {
+    background-color: var(--bee-wings);
+}
+
 .blue {
     background-color: var(--blue);
+    color: white;
 }
 
 .purple {
     background-color: var(--purple);
+    color: white;
+}
+
+.berry {
+    background-color: var(--berry);
     color: white;
 }
 
@@ -59,9 +69,7 @@
 
 html {
     overflow-x: hidden;
-    /* Hide horizontal scrollbar */
-    overflow-y: scroll;
-    /* Add vertical scrollbar */
+    overflow-y: auto;
 }
 
 body,
@@ -81,6 +89,12 @@ a {
     padding: 15px 20px;
 }
 
+#name a {
+    display: flex;
+    align-items: center;
+    /* Align items vertically center */
+}
+
 #bee {
     height: 80px;
     object-fit: contain;
@@ -95,30 +109,56 @@ img {
     max-width: 100%;
 }
 
+video {
+    width: 100%;
+}
+
 @font-face {
     font-family: 'Komika-Hand';
     font-style: normal;
     font-weight: normal;
-    src: local('Komika Hand'), url("C:\Users\megha\Desktop\Portfolio\typefaces\komika_hands") format('truetype');
+    src: local('Komika Hand'), url("..\typefaces\komika_hands") format('truetype');
 }
 
 @font-face {
     font-family: 'Bakso-Sapi';
     font-style: normal;
     font-weight: normal;
-    src: local('BaksoSapi'), url("C:\Users\megha\Desktop\Portfolio\typefaces") format('opentype');
+    src: local('BaksoSapi'), url("..\typefaces") format('opentype');
 }
 
 body {
     background-image: url("../images/background-images/brown-paper.jpg");
-    background-size: contain;
     background-repeat: repeat;
 }
 
-.background-paper {
+#full-guy {
+    background-image: url("../images/background-images/cluttered-bg.png");
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+}
+
+.background-paper,
+.cartoon-meghans {
     position: absolute;
     z-index: -1;
     overflow: hidden;
+}
+
+#i-made-this {
+    background: url("../images/cartoon-meghans/pop-in-side.svg") no-repeat;
+    background-size: cover;
+    width: 300px;
+    height: 400px;
+    left: -55px;
+}
+
+#say-hello {
+    width: 270px;
+    right: 155px;
+    z-index: 5;
+    top: 95px;
 }
 
 #paper1 {
@@ -210,7 +250,7 @@ ul {
 }
 
 h2.about {
-    background-color: var(--yellow);
+    color: white;
 }
 
 h3 {
@@ -223,17 +263,38 @@ li {
 }
 
 #categories-parent li,
-.tabs li {
+.tabs li,
+#scroll-list li {
     list-style-type: none;
     text-align: center;
     display: inline-block;
     font-size: 27px;
 }
 
-#faves {
-    background-color: var(--bee-wings);
-    box-shadow: 0 10px 10px 2px rgba(0, 0, 0, 0.3);
+.about-parent {
+    display: grid;
+    grid-template-columns: 3fr 4fr;
+    gap: 80px;
+    height: min-content;
 }
+
+#scroll-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 5px;
+}
+
+#likeToKnow {
+    margin: auto;
+    font-family: 'Bakso-Sapi';
+    list-style-type: none;
+    text-align: center;
+    display: block;
+    font-size: 27px;
+    padding: 15px 0;
+}
+
+
 
 h1 {
     font-size: 60px;
@@ -255,10 +316,6 @@ main {
     flex-direction: column;
 }
 
-.hidden {
-    display: none;
-}
-
 #intro-name {
     font-family: 'Bakso-Sapi';
     font-size: 100px;
@@ -266,11 +323,17 @@ main {
     text-align: center;
     position: relative;
     top: 35vh;
+    background-image: url("../images/background-images/scribble2.svg");
+    background-size: 1000px;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 20px 105px;
+
 }
 
 #categories-parent {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
     gap: 50px;
 }
 
@@ -278,10 +341,17 @@ main {
 #pubs:hover,
 #web:hover,
 #art:hover,
+#scroll-list li:hover,
 a:hover {
     color: var(--bee-wings);
     transition: 0.2s ease;
-    /*font-size: 30px;*/
+}
+
+#deselect-all:hover {
+    color: var(--blue);
+    cursor: pointer;
+    transition: 0.2s ease;
+
 }
 
 #french,
@@ -291,7 +361,7 @@ a:hover {
 
 #french:hover,
 #dutch:hover {
-    color: white;
+    color: #000000;
     transition: transform 0.3s ease;
 }
 
@@ -301,6 +371,11 @@ a:hover {
 #art:active {
     color: var(--bee-wings);
 }
+
+.grid-item.deactivated {
+    display: none;
+}
+
 
 .project-title {
     font-size: 35px;
@@ -314,7 +389,6 @@ a:hover {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 75px;
-
 }
 
 #portfolio-parent {
@@ -329,7 +403,27 @@ a:hover {
     min-height: 400px;
 }
 
-.container {
+.shadow {
+    box-shadow: 0 10px 10px 2px rgba(0, 0, 0, 0.3);
+}
+
+/*.grid-sizer,
+.grid-baby {
+    width: 27%;
+}
+
+.gutter-sizer {
+    width: 10%;
+}
+
+.grid-sizer,
+.gutter-sizer {
+    position: absolute;
+}*/
+
+
+.container,
+.container2 {
     max-width: 1000px;
     margin: auto;
 }
@@ -343,11 +437,11 @@ a:hover {
 }
 
 .bttm-spacer {
-    padding: 0 0 10vh 0;
+    padding: 0 0 5vh 0;
 }
 
 .top-spacer {
-    padding: 10vh 0 0 0;
+    padding: 5vh 0 0 0;
 }
 
 
@@ -371,6 +465,7 @@ a:hover {
     color: var(--purple);
 }
 
+
 .project-link {
     display: inline-block;
     background-image: url("../images/tape/tape-straight-kraft2.png");
@@ -382,7 +477,9 @@ a:hover {
 
 }
 
-#back-to-gallery {
+#back-to-gallery,
+#back-to-top,
+#to-cv {
     display: inline-block;
     background-image: url("../images/tape/tape-straight-kraft3.png");
     background-size: 360px 60px;
@@ -391,44 +488,47 @@ a:hover {
     text-align: center;
 }
 
+#to-cv {
+    margin: auto;
+}
+
 .bump-up {
     transform: translateY(-40px);
 }
 
-#logo {
+#bump-down {
+    transform: translateY(110px) rotate(5deg);
+}
+
+
+#tape-label1,
+#tape-label2,
+#tape-label3,
+#tape-label4 {
+    background-size: 300px 60px;
+    background-position: center;
+    background-repeat: no-repeat
+}
+
+#tape-label1 {
     background-image: url("../images/tape/tape-straight-kraft3.png");
-    background-size: 220px 60px;
-    /* Resize the background image to cover the entire container */
-    background-position: center;
-    /* Center the image */
-    background-repeat: no-repeat
 }
 
-#pubs {
+#tape-label2 {
     background-image: url("../images/tape/tape-straight-cream1.png");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 220px 60px;
 }
 
-#web {
+#tape-label3 {
     background-image: url("../images/tape/tape-straight-kraft2.png");
-    background-size: 220px 60px;
-    background-position: center;
-    background-repeat: no-repeat
 }
 
-#art {
+#tape-label4 {
     background-image: url("../images/tape/tape-straight-cream2.png");
-    background-size: 215px 60px;
-    background-position: center;
-    background-repeat: no-repeat
 }
 
 
 .pinback-button-scale {
-    height: 450px;
-    width: 450px;
+    object-fit: contain;
 }
 
 .hidden {
@@ -440,22 +540,42 @@ a:hover {
 }
 
 
-
-
 .projects {
     background-color: #ffffff;
     text-align: center;
     transform-origin: 50% 5%;
     transition: transform 0.3s ease;
+    margin: 0 0 20px 0;
+    box-shadow: 0 10px 10px 2px rgba(0, 0, 0, 0.3);
 }
 
-
-@media screen and (max-width: 900px) {
-    .ships-grid div:nth-child(2) img {
-        max-width: 65%
-    }
+.self-portrait {
+    background-color: #ffffff;
+    text-align: center;
+    transform-origin: 50% 5%;
+    transition: transform 0.3s ease;
+    margin: 0 0 30px 0;
+    box-shadow: 0 10px 10px 2px rgba(0, 0, 0, 0.3);
+    max-height: 400px;
 }
 
+.about img {
+    max-height: 275px;
+}
+
+.pop-up {
+    visibility: hidden;
+    position: absolute;
+    left: 20vw;
+    top: 5vh;
+    width: 60vw;
+    background-color: var(--yellow);
+    border: 5px solid var(--orange);
+}
+
+.pop-up p {
+    padding-bottom: 15px;
+}
 
 .crooked3 {
     -ms-transform: rotate(3deg);
@@ -498,12 +618,16 @@ a:hover {
 
 .tape2 {
     width: 400px;
-    rotate: 90deg;
     opacity: 80%;
-    display: block;
     position: absolute;
+    left: 250px;
+    top: -40px;
     /* Transform looks at the element itself and not the parent. */
-    transform: translateX(70%) translateY(275%);
+    /* transform: translateX(70%) translateY(275%); */
+}
+
+.tape4 {
+    left: 8vw;
 }
 
 .tape3 {
@@ -512,9 +636,28 @@ a:hover {
     rotate: 20deg;
     display: block;
     position: absolute;
-    right: 0;
+    top: -70px;
+    right: -100px;
     /* Transform looks at the element itself and not the parent. */
-    transform: translateY(-40%) translateX(10%);
+    /*transform: translateY(-40%) translateX(10%)*/
+}
+
+
+.tape4 {
+    width: 375px;
+    height: 48px;
+    display: block;
+    position: absolute;
+    left: 12vw;
+    top: -30px;
+
+}
+
+#section1,
+#section2,
+#section3 {
+    position: relative;
+
 }
 
 .portfolio-details {
@@ -527,8 +670,51 @@ a:hover {
     padding: 40px 20px 20px 20px;
 }
 
-p.about {
-    background-color: var(--bee-wings);
+/*Adapted from https://codepen.io/teddyzetterlund/pen/YPjEzP*/
+.card {
+    background-image:
+        linear-gradient(180deg, var(--bee-wings) 3.9rem, var(--blue) calc(1rem), var(--blue) calc(4.1rem), transparent 1px), repeating-linear-gradient(0deg, var(--bee-wings), var(--bee-wings) 1.5rem, var(--blue) 1px, var(--blue) calc(1.5rem + 1.5px));
+    box-shadow: 0 10px 10px 2px rgba(0, 0, 0, 0.3);
+    height: 12rem;
+    margin: auto;
+    position: relative;
+    top: 50%;
+    max-width: 750px;
+    padding: 40px;
+}
+
+#check-list {
+    display: inline-block;
+    list-style: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 5px;
+    column-gap: 20px;
+}
+
+
+input[type="checkbox"] {
+    appearance: none;
+    background-color: #fff;
+    margin: 0;
+    font: inherit;
+    color: currentColor;
+    width: 20px;
+    height: 20px;
+    border: 3px solid #000000;
+    border-radius: 0.15em;
+    transform: translateX(-0.5em) translateY(0.15em);
+    cursor: pointer;
+}
+
+input[type="checkbox"]:checked {
+    background-color: var(--yellow);
+    transition: ease;
+    transition-duration: 0.3s;
+}
+
+#deselect-all {
+    font-size: 24px;
 }
 
 
@@ -551,39 +737,44 @@ p.about {
 .next {
     position: absolute;
     display: block;
-    right: 0;
     top: 50%;
     cursor: pointer;
     width: auto;
     margin-top: -22px;
     padding: 10px;
     color: white;
-    font-family: "Komika-Hand";
+    font-family: "Bakso-Sapi";
     font-weight: bold;
-    font-size: 25px;
+    font-size: 40px;
     user-select: none;
     z-index: 51;
-
 }
 
 .prev {
-    border-radius: 0 3px 3px 0;
-    transform: translateY(-5%) translateX(-10%);
-    left: 0px;
-
+    transform: translateY(-25%) rotate(180deg);
+    text-align: right;
+    left: -7%;
 }
 
 /* Position the "next button" to the right */
 .next {
-    right: 0px;
-    transform: translateY(-5%) translateX(130%);
-    border-radius: 3px 0 0 3px;
+    right: -7%;
+    transform: translateY(-25%);
+}
+
+.extra-prev {
+    left: -11%;
+}
+
+.extra-next {
+    right: -11%;
 }
 
 /* On hover, add a black background color with a little bit see-through */
 .prev:hover,
 .next:hover {
     color: var(--bee-wings);
+    cursor: pointer;
 }
 
 /* Caption text */
@@ -622,6 +813,16 @@ p.about {
     display: inline-block;
     bottom: -20px;
     transition: 0.2s ease;
+}
+
+#dot-box {
+    transform: translateY(50px);
+    margin: auto;
+    text-align: center;
+}
+
+.dots-up {
+    transform: translateY(10px) !important;
 }
 
 
@@ -753,9 +954,6 @@ footer {
     padding-top: 102px;
 }
 
-
-
-
 /* https://codepen.io/jayenne/pen/qrKmer PUSH PIN */
 .pushpin {
     margin: auto;
@@ -767,8 +965,14 @@ footer {
     transition: transform 0.3s ease;
 }
 
-.projects .pushpin {
+.projects .pushpin,
+.about .pushpin {
     top: -30px;
+}
+
+.pushpin-holder {
+    position: relative;
+    top: -10px;
 }
 
 
@@ -1014,8 +1218,56 @@ a {
     right: -20px;
 }
 
+#hiding-bg {
+    background-color: #000000;
+    opacity: 60%;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    display: none;
+}
+
+#full-screen-exit {
+    color: white;
+    font-family: 'Bakso-Sapi';
+    font-size: 30px;
+    top: 2.5vh;
+    right: 4vw;
+    z-index: 5;
+    position: absolute;
+    display: none;
+}
+
+.full-screen {
+    /* position: absolute;
+    margin: auto;
+    top: 5vh;
+    left: -50%;
+    width: 50vw;
+    height: 75vh; */
+    position: relative;
+    left: -560px;
+    top: -815px;
+    width: 100vw;
+    height: 100vh;
+    background-color: #e65c38;
+}
+
+.full-screen-stuff {
+    position: absolute;
+    left: 15%;
+    top: 5vh;
+    min-width: 900px;
+    width: 75vw;
+    height: 75vh;
+}
 
 
+.full-middle {
+    position: absolute;
+    bottom: 10vh;
+}
 
 
 
@@ -1041,4 +1293,154 @@ a {
 
 ::-webkit-scrollbar-corner {
     background: var(--light-green);
+}
+
+
+
+
+@media screen and (max-width: 1200px) {
+
+    .tabs li a,
+    .tabs .active li a {
+        padding: 10px;
+    }
+
+    .tabs .active a,
+    .tabs li a:hover {
+        padding: 15px 10px;
+    }
+
+    #project-parent {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 100px;
+    }
+
+    #portfolio-parent {
+        display: grid;
+        grid-template-columns: 2fr 3fr;
+        gap: 100px;
+        height: min-content;
+    }
+
+    #categories-parent {
+        gap: 0;
+    }
+
+    .about-parent {
+        display: inline-block;
+    }
+
+    #bump-down {
+        transform: translateY(0px) rotate(5deg);
+        margin: 60px 0 0 0;
+    }
+
+    .self-portrait {
+        max-width: 375px;
+        margin: auto;
+        margin: auto auto 90px auto;
+    }
+
+    .tape2 {
+        left: 100px;
+        top: -50px;
+        transform: rotate(6deg);
+    }
+
+
+
+
+
+    #tape-label1,
+    #tape-label2,
+    #tape-label3 {
+        background-size: 200px 85px;
+    }
+
+    .container2 {
+        max-width: 700px;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+
+    #categories-parent {
+        grid-template-columns: 1fr 1fr;
+        gap: 5px;
+    }
+
+    #portfolio-parent {
+        grid-template-columns: 1fr;
+        gap: 0px;
+    }
+
+    .bump-up {
+        transform: translateY(0px);
+    }
+
+    #dot-box {
+        transform: translateY(-10px);
+    }
+
+    .container {
+        max-width: 700px;
+    }
+
+    #intro-name {
+        top: 27.5vh;
+        background-image: url("../images/background-images/scribble1.svg");
+        background-size: auto 285px;
+        padding: 20px 105px;
+    }
+
+    h1 {
+        font-size: 40px;
+    }
+
+    #bee {
+        height: 50px;
+        object-fit: contain;
+        align-self: flex-end;
+        animation-duration: 1s;
+        margin: 0 auto 0 auto;
+        transform-origin: bottom;
+        padding: 0 0 0 10px;
+    }
+}
+
+
+@media screen and (max-width: 750px) {
+    #project-parent {
+        grid-template-columns: 1fr;
+        gap: 100px;
+        z-index: 1;
+        position: relative;
+    }
+
+    #intro-name {
+        padding: 20px;
+    }
+
+    .container2 {
+        max-width: 500px;
+    }
+
+    #scroll-list li {
+        font-size: 20px;
+    }
+
+    #tape-label1,
+    #tape-label2,
+    #tape-label3 {
+        background-size: 130px 80px;
+    }
+
+    #name a h1 {
+        display: none;
+    }
+
+    #bee {
+        height: 80px;
+    }
 }

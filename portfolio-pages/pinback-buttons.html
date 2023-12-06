@@ -3,6 +3,7 @@
 
 <head>
     <title>Meghan Rennie</title>
+    <link rel="icon" type="image/png" href="..\images\bee-favicon.png"/>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/style.css">
@@ -27,11 +28,13 @@
         <main>
             <div id="portfolio-parent">
                 <div class="wrapper bump-up">
-                    <div class="pushpin tilted">
-                        <div class="pinhead"></div>
-                        <div class="pinbase"></div>
-                        <div class="pinshaft"></div>
-                        <div class="pinpoint"></div>
+                    <div class="portfolio pushpin-holder">
+                        <div class="pushpin tilted">
+                            <div class="pinhead"></div>
+                            <div class="pinbase"></div>
+                            <div class="pinshaft"></div>
+                            <div class="pinpoint"></div>
+                        </div>
                     </div>
                     <h2 class="crooked-2 dark-green project-title">Pinback Buttons - Edition 1</h2>
                     <ul class="wrapper portfolio-list">
@@ -40,21 +43,6 @@
                         <li>Project type: Independent project</li>
                         <li>Year: 2020-2022</li>
                     </ul>
-                    <div class="wrapper">
-                        <p class="portfolio-details wrapper"> Meghan loves the accessibility of pinback buttons. They're
-                            easy to disseminate; affordable to make and purchase; and, as a wearable
-                            accessory, they occupy a special artistic context. Buttons become a part of the
-                            wearer's curated identity. Furthermore, they become a type of public art, finding an
-                            audience in anyone whom the wearer meets throughout the day. All in all, what's not to love?
-                        </p>
-                        <p class="portfolio-details wrapper"> Meghan makes her buttons by hand with her own button
-                            press. They are currently for sale at the <a href="https://artslethbridge.org/">Allied Arts
-                                Council</a> shop, located at <a href="https://maps.app.goo.gl/2j2wFpF2qbPvrkok6">318 7
-                                St S, Lethbridge</a></p>
-                    </div>
-                    <a href="../projects.html">
-                        <h2 id="back-to-gallery" class="wrapper">return to gallery</h2>
-                    </a>
                 </div>
 
                 <div class="wrapper">
@@ -117,25 +105,37 @@
                                 style="width:100%">
                             <div class="text">"Toe Beans"</div>
                         </div>
-
-                        <!-- Next and previous buttons -->
-                        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-                        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                        <div style="text-align:center" id="dot-box">
+                            <span class="dot dot-active active-bounce" onclick="currentSlide(1)"></span>
+                            <span class="dot" onclick="currentSlide(2)"></span>
+                            <span class="dot" onclick="currentSlide(3)"></span>
+                            <span class="dot" onclick="currentSlide(4)"></span>
+                            <span class="dot" onclick="currentSlide(5)"></span>
+                            <span class="dot" onclick="currentSlide(6)"></span>
+                            <span class="dot" onclick="currentSlide(7)"></span>
+                        </div>
+                        <a class="prev extra-prev" onclick="plusSlides(-1)">></a>
+                        <a class="next extra-next" onclick="plusSlides(1)">></a>
                     </div>
                     <br>
                     <br>
-                    <br>
-                    <!-- The dots/circles -->
-                    <div style="text-align:center" id="dot-box">
-                        <span class="dot dot-active active-bounce" onclick="currentSlide(1)"></span>
-                        <span class="dot" onclick="currentSlide(2)"></span>
-                        <span class="dot" onclick="currentSlide(3)"></span>
-                        <span class="dot" onclick="currentSlide(4)"></span>
-                        <span class="dot" onclick="currentSlide(5)"></span>
-                        <span class="dot" onclick="currentSlide(6)"></span>
-                        <span class="dot" onclick="currentSlide(7)"></span>
-                    </div>
                 </div>
+            </div>
+            <div class="wrapper">
+                <p class="portfolio-details wrapper"> Meghan loves the accessibility of pinback buttons. They're
+                    easy to disseminate; affordable to make and purchase; and, as a wearable
+                    accessory, they occupy a special artistic context. Buttons become a part of the
+                    wearer's curated identity. Furthermore, they become a type of public art, finding an
+                    audience in anyone whom the wearer meets throughout the day. All in all, what's not to love?
+                </p>
+                <p class="portfolio-details wrapper"> Meghan makes her buttons by hand with her own button
+                    press. They are currently for sale at the <a href="https://artslethbridge.org/">Allied Arts
+                        Council</a> shop, located at <a href="https://maps.app.goo.gl/2j2wFpF2qbPvrkok6">318 7
+                        St S, Lethbridge</a></p>
+                <br>
+                <a href="../projects.html">
+                    <h2 id="back-to-gallery" class="wrapper">return to gallery</h2>
+                </a>
             </div>
         </main>
     </div>

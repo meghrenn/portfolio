@@ -3,6 +3,7 @@
 
 <head>
     <title>Meghan Rennie</title>
+    <link rel="icon" type="image/png" href="..\images\bee-favicon.png" />
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/style.css">
@@ -27,11 +28,13 @@
         <main>
             <div id="portfolio-parent">
                 <div class="wrapper bump-up">
-                    <div class="pushpin tilted">
-                        <div class="pinhead"></div>
-                        <div class="pinbase"></div>
-                        <div class="pinshaft"></div>
-                        <div class="pinpoint"></div>
+                    <div class="portfolio pushpin-holder">
+                        <div class="pushpin tilted">
+                            <div class="pinhead"></div>
+                            <div class="pinbase"></div>
+                            <div class="pinshaft"></div>
+                            <div class="pinpoint"></div>
+                        </div>
                     </div>
                     <h2 class="crooked5 orange project-title">Prairie Invasions</h2>
                     <ul class="wrapper portfolio-list">
@@ -75,32 +78,28 @@
                             <div class="numbertext">5 / 5</div>
                             <img class="pinback-button-scale" src="..\images\prairie-invasions\prairie-invasions5.jpg"
                                 style="width:100%">
-
                         </div>
-
-                        <!-- Next and previous buttons -->
-                        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-                        <a class="next" onclick="plusSlides(1)">&#10095;</a>
-                    </div>
-                    <br>
-                    <br>
-                    <br>
-                    <!-- The dots/circles -->
-                    <div style="text-align:center" id="dot-box">
-                        <span class="dot dot-active active-bounce" onclick="currentSlide(1)"></span>
-                        <span class="dot" onclick="currentSlide(2)"></span>
-                        <span class="dot" onclick="currentSlide(3)"></span>
-                        <span class="dot" onclick="currentSlide(4)"></span>
-                        <span class="dot" onclick="currentSlide(5)"></span>
+                        <div id="dot-box" class="dots-up">
+                            <span class="dot dot-active active-bounce" onclick="currentSlide(1)"></span>
+                            <span class="dot" onclick="currentSlide(2)"></span>
+                            <span class="dot" onclick="currentSlide(3)"></span>
+                            <span class="dot" onclick="currentSlide(4)"></span>
+                            <span class="dot" onclick="currentSlide(5)"></span>
+                        </div>
+                        <a class="prev extra-prev" onclick="plusSlides(-1)">></a>
+                        <a class="next extra-next" onclick="plusSlides(1)">></a>
                     </div>
                 </div>
             </div>
+            <br>
+            <br>
             <div class="wrapper">
                 <p class="portfolio-details wrapper"> <a
                         href="https://shop-at-saag.myshopify.com/products/prairie-invasions?_pos=1&_sid=92bb37df8&_ss=r"></a>
                     The Southern Alberta Art Gallery (SAAG) commissioned Meghan to do the layout design for the
                     art book <i>Prairie Invasions</i> by Emily Neufeld. From the SAAG Shop:
-                <p>"In 2018, Emily Neufeld traveled with her partner and 10-year-old son through the Prairies,
+                <p class="portfolio-details wrapper">"In 2018, Emily Neufeld traveled with her partner and 10-year-old
+                    son through the Prairies,
                     the previous home of her Mennonite grandmother, to investigate abandoned farmhouses, built
                     by settler migrants in the 19th century. Through subtle interventions, captured in beautiful
                     photographs, Neufeld grapples with tensions of colonial history, and contends with her own
@@ -110,10 +109,11 @@
                     features documentation of Neufeld's installations, notes and photographs from her field
                     work, and an essay from Nura Ali."</p>
                 </p>
+                <br>
+                <a href="../projects.html">
+                    <h2 id="back-to-gallery" class="wrapper">return to gallery</h2>
+                </a>
             </div>
-            <a href="../projects.html">
-                <h2 id="back-to-gallery" class="wrapper">return to gallery</h2>
-            </a>
         </main>
     </div>
 

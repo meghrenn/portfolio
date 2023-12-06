@@ -3,174 +3,202 @@
 
 <head>
     <title>Meghan Rennie</title>
+    <link rel="icon" type="image/png" href="images\bee-favicon.png" />
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
     <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
     <script src="js/scripts.js"></script>
+    <!-- Include jQuery Masonry -->
+    <!--     <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.js"></script> -->
 </head>
 
 
-<body>
-    <header class="header">
+<body class="flex-parent">
+    <header class="header" id="section1">
         <ul class="tabs group sticky">
             <li><a href="about.html">About</a></li>
             <li class="active"><a href="projects.html">Projects</a></li>
             <li><a href="music.html">Music</a></li>
-            <li><a href="zines.html">Zines</a></li>
         </ul>
         <div id="name">
             <a href="index.html">
-                <h1>Meghan Rennie <img id="bee" src="C:\Users\megha\Desktop\Portfolio\images\bee-transparent.png"></h1>
+                <h1>Meghan Rennie</h1><img id="bee" src="images\bee-transparent.png">
             </a>
         </div>
     </header>
-    <div class="background-paper" id="paper5"></div>
+    <!-- <div class="background-paper" id="paper5"></div>
     <div class="background-paper" id="paper6"></div>
     <div class="background-paper" id="paper7"></div>
-    <div class="background-paper" id="paper8"></div>
-    <div class="container content">
+    <div class="background-paper" id="paper8"></div> -->
+    <div class="cartoon-meghans" id="i-made-this"></div>
+
+
+
+    <div class="container2 content">
         <main>
-            <ul class="bttm-spacer" id="categories-parent">
-                <li class="picture-padding" id="logo">Logos</li>
-                <li class="picture-padding" id="pubs">Publications</li>
-                <li class="picture-padding" id="web">Web</li>
-                <li class="picture-padding" id="art">Digital Art</li>
-            </ul>
-            <div id="project-parent">
-                <a href="portfolio-pages\pinback-buttons.html">
-                    <div class="grid-baby projects digital-art crooked5">
+            <div class="bttm-spacer">
+                <div class="card wrapper">
+                    <br>
+                    <img class="tape4" src="images\tape\tape-straight-kraft2.png">
+                    <h2>Sort by project type:</h2>
+                    <div class="wrapper">
+                        <ul id="check-list">
+                            <li class="check"><input type="checkbox" data-filter="logo-design">Logos</li>
+                            <li class="check"><input type="checkbox" data-filter="pub-design">Publications</li>
+                            <li class="check"><input type="checkbox" data-filter="web-design">Web</li>
+                            <li class="check"><input type="checkbox" data-filter="digital-art">Digital Art</li>
+                            <li class="check"><input type="checkbox" data-filter="buttons">Buttons</li>
+                            <li id="deselect-all" class="deselect-all">Deselect All </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div id="project-parent" class="top-spacer">
+                <!--<div class="grid-sizer"></div>
+                <div class="gutter-sizer"></div> -->
+                <a href="portfolio-pages\pinback-buttons.html" class="digital-art buttons">
+                    <div class="grid-baby projects crooked5">
                         <div class="pushpin tilted">
                             <div class="pinhead"></div>
                             <div class="pinbase"></div>
                             <div class="pinshaft"></div>
                             <div class="pinpoint"></div>
                         </div>
-                        <img class="picture-padding"
-                            src="C:\Users\megha\Desktop\Portfolio\images\pinback-buttons\all-pins.png">
+                        <img class="picture-padding" src="images\thumbnails\all-pins.jpg"
+                            alt="A collection of 7 circular designs for pinback buttons">
                         <h3 class="picture-padding">Pinback Buttons</h3>
                     </div>
                 </a>
 
-                <a href="portfolio-pages\gender-game.html">
-                    <div class="grid-baby projects web-design">
+                <a href="portfolio-pages\gender-game.html" class="web-design">
+                    <div class="grid-baby projects">
                         <div class="pushpin tilted">
                             <div class="pinhead"></div>
                             <div class="pinbase"></div>
                             <div class="pinshaft"></div>
                             <div class="pinpoint"></div>
                         </div>
-                        <img class="picture-padding"
-                            src="C:\Users\megha\Desktop\Portfolio\images\gender-game\in-progress-game-narrow.png">
+                        <img class="picture-padding" src="images\thumbnails\gender-game-thumbnail.jpg"
+                            alt="A screenshot of a French language game.">
                         <h3 class="picture-padding">French Gender Game</h3>
                     </div>
                 </a>
-                <a href="portfolio-pages\prairie-invasions.html">
-                    <div class="grid-baby projects pub-design crooked3">
+
+                <a href="portfolio-pages\prairie-invasions.html" class="pub-design">
+                    <div class="grid-baby projects crooked3">
                         <div class="pushpin tilted">
                             <div class="pinhead crooked-2"></div>
                             <div class="pinbase crooked-2"></div>
                             <div class="pinshaft crooked-2"></div>
                             <div class="pinpoint"></div>
                         </div>
-                        <img class="picture-padding"
-                            src="C:\Users\megha\Desktop\Portfolio\images\prairie-invasions\prairie-invasions2.jpg">
+                        <img class="picture-padding" src="images\thumbnails\prairie-invasions-thumbnail.jpg"
+                            alt="One hand holds a paperback book open to a two-page photographic spread">
                         <h3 class="picture-padding">Prairie Invasions</h3>
                     </div>
                 </a>
-                <a href="portfolio-pages\nmed.html">
-                    <div class="grid-baby projects logo-design crooked-2">
+
+                <a href="portfolio-pages\nmed.html" class="logo-design">
+                    <div class="grid-baby projects crooked-2">
                         <div class="pushpin tilted">
                             <div class="pinhead crooked5"></div>
                             <div class="pinbase crooked5"></div>
                             <div class="pinshaft crooked5"></div>
                             <div class="pinpoint"></div>
                         </div>
-                        <img class="picture-padding" src="C:\Users\megha\Desktop\Portfolio\images\nmed-department.png"
-                            alt="magical glob 1">
+                        <img class="picture-padding" src="images\thumbnails\nmed-department-thumbnail.png"
+                            alt="the logo for the University of Lethbridge's New Media Department. The logo depicts the partially-overlapping letters NMED, which are coloured blue, red/orange, yellow, and green, respectively.">
                         <h3 class="picture-padding">New Media Department</h3>
                     </div>
                 </a>
-                <a href="portfolio-pages\globs.html">
-                    <div class="grid-baby projects digital-art crooked5">
+                <a href="portfolio-pages\globs.html" class="digital-art">
+                    <div class="grid-baby projects crooked5">
                         <div class="pushpin tilted">
                             <div class="pinhead pink"></div>
                             <div class="pinbase pink"></div>
                             <div class="pinshaft pink"></div>
                             <div class="pinpoint"></div>
                         </div>
-                        <img class="picture-padding" src="C:\Users\megha\Desktop\Portfolio\images\globs\glob-1.png"
-                            alt="magical glob 1">
+                        <img class="picture-padding" src="images\thumbnails\glob-thumbnail.png"
+                            alt="A digital art piece depicting a dark purple orb suspending in a dripping glob of bright orange.">
                         <h3 class="picture-padding">Globs</h3>
                     </div>
                 </a>
-                <a href="portfolio-pages\apologetically-unavailable.html">
-                    <div class="grid-baby projects web-design">
+
+                <a href="portfolio-pages\apologetically-unavailable.html" class="web-design">
+                    <div class="grid-baby projects">
                         <div class="pushpin tilted">
                             <div class="pinhead pink"></div>
                             <div class="pinbase pink"></div>
                             <div class="pinshaft pink"></div>
                             <div class="pinpoint"></div>
                         </div>
-                        <img class="picture-padding"
-                            src="C:\Users\megha\Desktop\Portfolio\images\apologetically-unavailable\apologetically-unavailable-intro.png"
-                            alt="magical glob 1">
+                        <img class="picture-padding" src="images\thumbnails\apologetically-unavailable-thumbnail.jpg"
+                            alt="The landing page to the Apologetically Unavailable website. It depicts a written letter from Meghan to the site's visitor, apologizing for not responding to their emails/messages.">
                         <h3 class="picture-padding">Apologetically Unavailable</h3>
                     </div>
                 </a>
-                <a href="portfolio-pages\climate-story.html">
-                    <div class="grid-baby projects pub-design crooked5">
+
+                <a href="portfolio-pages\climate-story.html" class="pub-design">
+                    <div class="grid-baby projects crooked5">
                         <div class="pushpin tilted">
                             <div class="pinhead pink"></div>
                             <div class="pinbase pink"></div>
                             <div class="pinshaft pink"></div>
                             <div class="pinpoint"></div>
                         </div>
-                        <img class="picture-padding"
-                            src="C:\Users\megha\Desktop\Portfolio\images\our-climate-story\climate-story-title.png">
+                        <img class="picture-padding" src="images\thumbnails\climate-story-title-thumbnail.jpg"
+                            alt="The front cover of the publication Our Climate Story: Earth Day 2022 Zine. The cover depicts light green text, filling up the ">
                         <h3 class="picture-padding">Our Climate Story</h3>
                     </div>
                 </a>
-                <a href="portfolio-pages\an-aquila-sundered.html">
-                    <div class="grid-baby projects logo-design crooked-2">
+
+                <a href="portfolio-pages\an-aquila-sundered.html" class="logo-design">
+                    <div class="grid-baby projects crooked-2">
                         <div class="pushpin tilted">
                             <div class="pinhead pink"></div>
                             <div class="pinbase pink"></div>
                             <div class="pinshaft pink"></div>
                             <div class="pinpoint"></div>
                         </div>
-                        <img class="picture-padding"
-                            src="C:\Users\megha\Desktop\Portfolio\images\an-aquila-sundered.png">
+                        <img class="picture-padding" src="images\thumbnails\an-aquila-sundered-thumbnail.png"
+                            alt="The logo for An Aquila Sundered">
                         <h3 class="picture-padding">An Aquila Sundered</h3>
                     </div>
                 </a>
-                <a href="portfolio-pages\portfolio-website.html">
-                    <div class="grid-baby projects web-design crooked3">
+
+                <!-- <a href="portfolio-pages\portfolio-website.html" class="web-design">
+                    <div class="grid-baby projects crooked3">
                         <div class="pushpin tilted">
                             <div class="pinhead pink"></div>
                             <div class="pinbase pink"></div>
                             <div class="pinshaft pink"></div>
                             <div class="pinpoint"></div>
                         </div>
-                        <img class="picture-padding"
-                            src="C:\Users\megha\Desktop\Portfolio\images\bee-name-transparent.gif">
+                        <img class="picture-padding" src="images\thumbnails\bee-name-transparent.gif"
+                            alt="Meghan's logo">
                         <h3 class="picture-padding">Digital Portfolio</h3>
                     </div>
-                </a>
-                <a href="portfolio-pages\drawing-system.html">
-                    <div class="grid-baby projects digital-art">
+                </a> -->
+
+                <a href="portfolio-pages\drawing-system.html" class="digital-art">
+                    <div class="grid-baby projects">s
                         <div class="pushpin tilted">
                             <div class="pinhead pink"></div>
                             <div class="pinbase pink"></div>
                             <div class="pinshaft pink"></div>
                             <div class="pinpoint"></div>
                         </div>
-                        <img class="picture-padding"
-                            src="C:\Users\megha\Desktop\Portfolio\images\drawing-system\drawing-system6.jpg">
+                        <img class="picture-padding" src="images\thumbnails\drawing-system-thumbnail.jpg"
+                            alt="Abstract digital art consisting of multicoloured bezier curves on a gray background">
                         <h3 class="picture-padding">Drawing System</h3>
                     </div>
                 </a>
             </div>
+            <a class="top-spacer" data-target="section1">
+                <h2 id="back-to-top" class="wrapper">Back to top</h2>
+            </a>
         </main>
         <footer></footer>
     </div>
