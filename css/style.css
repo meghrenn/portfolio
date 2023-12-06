@@ -155,10 +155,11 @@ body {
 }
 
 #say-hello {
-    width: 270px;
-    right: 155px;
+    width: 260px;
     z-index: 5;
-    top: 95px;
+    display: block;
+    position: absolute;
+    transform: translateY(-12%) translateX(290%);
 }
 
 #paper1 {
