@@ -3,7 +3,7 @@
 
 <head>
     <title>Meghan Rennie</title>
-    <link rel="icon" type="image/png" href="images\bee-favicon.png" />
+    <link rel="icon" type="image/png" href="images\bee.svg" />
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
@@ -17,12 +17,12 @@
     <header class="header" id="myHeader">
         <ul class="tabs group sticky">
             <li class="active"><a href="about.html">About</a></li>
-            <li><a href="projects.html">Projects</a></li>
             <li><a href="music.html">Music</a></li>
+            <li><a href="projects.html">Projects</a></li>
         </ul>
         <div id="name">
             <a href="index.html">
-                <h1>Meghan Rennie</h1> <img id="bee" src="images\bee-transparent.png">
+                <h1>Meghan Rennie</h1> <img id="bee" src="images\bee.svg">
             </a>
         </div>
     </header>
@@ -32,7 +32,7 @@
     <div class="background-paper" id="paper4"></div>
     <div class="container2 content">
         <main class="wrapper">
-            <img class="cartoon-meghans" id="say-hello" src="images/cartoon-meghans/sitting-chill.png">
+            <img class="cartoon-meghans" id="say-hello" src="images/cartoon-meghans/sitting-waving1.svg">
             <div class="about-parent wrapper">
                 <div class="about self-portrait">
                     <div class="about pushpin tilted">
@@ -41,8 +41,9 @@
                         <div class="pinshaft"></div>
                         <div class="pinpoint"></div>
                     </div>
-                    <img class="about" src="images/meghan-hello2.png" alt="A cartoon representation of Meghan">
-                    <h3 class="picture-padding">"Hello!"</h3>
+                    <img class="about" src="images/meghan-irl.jpg" alt="A cartoon representation of Meghan">
+
+                    <h3 class="picture-padding">Meghan irl</h3>
                 </div>
                 <div ID="bump-down">
                     <img class="tape1" src="images\tape\tape-corner-white.png">
@@ -62,17 +63,25 @@
                     </div>
                 </div>
             </div>
-
             <br>
-
             <br>
-            <div class="bttm-spacer">
-                <p class="wrapper" id="likeToKnow"> What would you like to know about her?</p>
-                <ul class="picture-padding" id="scroll-list">
-                    <li class="picture-padding" id="tape-label1" data-target="section1">Creative Practice</li>
-                    <li class="picture-padding" id="tape-label2" data-target="section2">Personal Life</li>
-                    <li class="picture-padding" id="tape-label3" data-target="section3">Contact Info</li>
+            <!-- <object data="images/cartoon-meghans/learn-about-me-largevw.svg" type="image/svg+xml"
+                id="learn-about-me-line"></object> -->
+            <div id="know-grid" class="bttm-spacer">
+                <div class="oval-speech about-me-bubble" id="span2columns">
+                    <p>What would you like to know about me?</p>
+                </div>
+                <img src="images/cartoon-meghans/standing1.svg" id="learn-about-me"
+                    alt="A cartoon representation of Meghan">
+                <ul id="scroll-list">
+                    <div class="oval-speech about-me-bubble" id="span1column">
+                        <p>What would you like to know about me?</p>
+                    </div>
+                    <li class="know-padding" id="tape-label1" data-target="section1">Creative Practice</li>
+                    <li class="know-padding" id="tape-label5" data-target="section2">Personal Life</li>
+                    <li class="know-padding" id="tape-label3" data-target="section3">Contact Info</li>
                 </ul>
+
             </div>
             <div class="bttm-spacer crooked-2" id="section1">
                 <div class="shadow">
@@ -88,9 +97,10 @@
                     </p>
                     <p class="about wrapper light-green">Around this time, she also started writing and recording songs
                         and
-                        sharing
-                        her
-                        music online. Originally, this was under the project title Be Kind to Dogs, though she has since
+                        <a href="music.html">sharing
+                            her
+                            music online</a>. Originally, this was under the project title Be Kind to Dogs, though she
+                        has since
                         switched to performing under her own name. As a musician, she has performed at The Verge Arts
                         Festival in Cold Lake and at Arts Days events in Lethbridge, and has been on the award-winning
                         CKXU show For the Record. Additionally, she created the intro/outro music for the podcast <a
@@ -108,8 +118,12 @@
                         occasional graphic design commission, creating logos and designing print publications. She makes
                         comics, usually as mini-zines which she disseminates around town. She also writes: her poetry
                         and
-                        prose fiction has appeared in multiple publications, including The Blue Marble Review, The
-                        Meliorist, Pulp Kings, and Sad Girl Reviews, and her one-act dark comedy, <i>It’s a Dead
+                        prose fiction has appeared in multiple publications, including <a
+                            href="https://themeliorist.ca/wp-content/uploads/2020/03/meliorist-march-2020-web.pdf">The
+                            Meliorist</a>, <a href="https://straybooks.ca/pulp-kings-seven-war/">Pulp Kings</a>, <a
+                            href="https://bluemarblereview.com/what-practice-makes/">The Blue Marble Review</a>, and
+                        <a href="https://www.sadgirlreview.com/sgr-issue5.pdf">Sad Girl Review</a>, and her one-act
+                        dark comedy, <i>It’s a Dead
                             Body!</i>,
                         was
                         performed at the 2019 Verge Arts Festival. Her academic writing has also been accepted into
@@ -124,7 +138,7 @@
                 <br>
                 <div class="crooked-2 shadow">
                     <img class="tape2" src="images\tape\tape-straight-cream2.png">
-                    <h2 class="about wrapper berry">Artist Statement</h2>
+                    <!-- <h2 class="about wrapper berry">Artist Statement</h2> -->
                     <p class="about wrapper pink">Iterative processes soothe her perfectionist tendencies. She likes
                         practice
                         rounds,
@@ -149,19 +163,15 @@
                 <br>
                 <br>
                 <br>
-                <div class="about-parent wrapper">
-                    <div class="about">
-                        <a href="meghan-rennie-artist-cv.pdf">
-                            <img class="about" src="images/cartoon-meghans/standing2.png"
-                                alt="A cartoon representation of Meghan">
-                        </a>
-                    </div>
-                    <div class="about">
-                        <!-- */business card/* -->
-                        <a href="">
-                            <img class="about" src="images/meghan-hello2.png" alt="A cartoon representation of Meghan">
-                        </a>
-                    </div>
+                <div id="more-info-grid" class="wrapper">
+
+                    <a class="picture-padding" id="tape-label4" href="meghan-rennie-artist-cv.pdf">
+                        Artist CV
+                    </a>
+                    <a class="picture-padding" id="tape-label2" href="zines.html">
+                        Business Card Zine
+                    </a>
+
                 </div>
             </div>
             <br>
@@ -199,8 +209,7 @@
                         <div class="pinshaft"></div>
                         <div class="pinpoint"></div>
                     </div>
-                    <div class="card wrapper">
-                        <br>
+                    <div class="about card wrapper" id="fave-card">
                         <ul class="wrapper">
                             <li>Favourite Book: <a
                                     href="https://archive.org/details/in.ernet.dli.2015.350305/page/n9/mode/2up">A Tree
@@ -211,17 +220,18 @@
                             <li>Favourite Creature: <a href="https://youtu.be/j2TUAsVksWQ?si=D6j6FTHyi60NpHUa">Pond
                                     snail (Lymnaeidae)</a></li>
                         </ul>
+
                     </div>
                 </div>
             </div>
             <br>
 
-            <div class="about-parent wrapper" id="section3">
-                <div class="about">
-                    <img class="about" src="images/meghan-hello2.png" alt="A cartoon representation of Meghan">
-                </div>
-                <div class="about">
-                    <img class="about" src="images/meghan-hello2.png" alt="A cartoon representation of Meghan">
+            <div class="wrapper" id="section3">
+                <div class="shadow">
+                    <!-- <img class="tape3" src="images\tape\tape-straight-cream1.png"> -->
+                    <h2 class="about wrapper berry">Contact Information</h2>
+                    <p class="about wrapper pink">You can reach Meghan via email at meghancrennie@gmail.com.
+                    </p>
                 </div>
             </div>
             <a class="top-spacer" data-target="section1">
@@ -229,9 +239,6 @@
             </a>
         </main>
     </div>
-    <footer>
-        <p class="wrapper">meghancrennie@gmail.com</p>
-    </footer>
 </body>
 
 
