@@ -12,6 +12,15 @@ $(document).ready(function () {
         $(this).addClass(' jostle ');
     });
 
+
+    $(document).on('click', function (event) {
+        var mouseX = event.pageX;
+        var mouseY = event.pageY;
+
+        console.log('Mouse Coordinates: X=' + mouseX + ', Y=' + mouseY);
+    });
+
+
     // Add a mouseout event listener to reset the elements to their original state
     $allProjects.on('mouseout', function () {
         // Remove the "jostle" class from all .project elements
@@ -131,11 +140,32 @@ $(document).ready(function () {
         checkboxes.prop('checked', false);
         updateVisibility(); // Call updateVisibility to apply changes
     });
+
+
+    // function updateObjectData() {
+    //     var viewportWidth = window.innerWidth || document.documentElement.clientWidth;
+
+    //     // Check if the viewport width is less than 1200px
+    //     if (viewportWidth > 1200) {
+    //         // Update the data attribute with the new SVG path
+    //         $('#learn-about-me-line').attr('data', 'images/cartoon-meghans/learn-about-me-largevw.svg');
+    //     } else {
+    //         if (viewportWidth > 750) {
+    //             // Update the data attribute with the new SVG path
+    //             $('#learn-about-me-line').attr('data', 'images/cartoon-meghans/learn-about-me-mediumvw.svg');
+    //         } else {
+    //             // Reset the data attribute if the viewport width is 1200px or more
+    //             $('#learn-about-me-line').attr('data', 'images/cartoon-meghans/learn-about-me-smallvw.svg');
+    //         }
+    //     }
+    // }
+
+    // // Call the function initially
+    // updateObjectData();
+
+    // // Add event listener to check viewport width on window resize
+    // $(window).resize(updateObjectData);
 });
-
-
-
-
 
 
 
@@ -207,9 +237,17 @@ function outroAnim(placeHold) {
     });
 }
 
-$("#click-for-cv").on("click", function () {
-    introAnim("#artist-cv");
+// $("#click-for-cv").on("click", function () {
+//     introAnim("#artist-cv");
+// });
+// $("#exit-cv").on("click", function () {
+//     outroAnim("#artist-cv");
+// });
+
+$(html).on("click", function () {
+
+
+    $('#bee').addClass(' active-bounce');
 });
-$("#exit-cv").on("click", function () {
-    outroAnim("#artist-cv");
-});
+
+
