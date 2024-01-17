@@ -433,10 +433,27 @@ main {
 #nav-list li:hover,
 #scroll-list li:hover,
 a:hover {
-    color: var(--bee-wings);
+    color: var(--purple);
     transition: 0.2s ease;
 }
 
+#name a:hover {
+    color: var(--yellow);
+    transition: 0.2s ease;
+}
+
+/* .cool-hover:hover {
+    color: var(--bee-wings);
+    transition: 0.2s ease;
+} */
+
+#back-to-gallery:hover,
+#back-to-top:hover {
+    color: var(--berry);
+    transition: 0.2s ease;
+}
+
+.i-like:hover,
 #deselect-all:hover {
     color: var(--blue);
     cursor: pointer;
@@ -455,17 +472,9 @@ a:hover {
     transition: transform 0.3s ease;
 }
 
-#logo:active,
-#pubs:active,
-#web:active,
-#art:active {
-    color: var(--bee-wings);
-}
-
 .grid-item.deactivated {
     display: none;
 }
-
 
 .project-title {
     font-size: 40px;
@@ -474,11 +483,26 @@ a:hover {
     padding: 5px 10px;
 }
 
-
 #project-parent {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 75px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    flex-direction: row;
+    justify-content: space-evenly;
+    row-gap: 75px;
+    column-gap: 35px;
+    height: min-content;
+    padding: 50px 0 50px 0;
+    margin: auto;
+}
+
+.within-picture-flex {
+    height: 350px;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
 }
 
 
@@ -489,9 +513,13 @@ a:hover {
 #zine-parent {
     display: flex;
     flex-wrap: wrap;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 25px;
+    align-items: stretch;
+    flex-direction: row;
+    justify-content: space-evenly;
+    gap: 40px;
     height: min-content;
+    padding: 50px 0 50px 0;
+    margin: auto;
 }
 
 .zine-grid-baby {
@@ -504,13 +532,9 @@ a:hover {
     justify-content: end;
 } */
 
-.zine-baby-horizontal {
-    flex-grow: 2;
-}
-
 .flexy {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: space-evenly;
 }
 
@@ -523,6 +547,7 @@ a:hover {
 
 .grid-baby {
     height: 400px;
+    width: 300px;
 }
 
 .shadow {
@@ -583,12 +608,17 @@ a:hover {
     padding: 15px 20px;
 }
 
-.picture-padding {
+.picture-padding,
+.zine-padding {
+    padding: 0 15px 0 15px;
+}
+
+.basic-padding {
     padding: 15px;
 }
 
-.zine-padding {
-    padding: 0 15px 0 15px;
+.caption-padding {
+    padding: 0 0 25px;
 }
 
 
@@ -669,23 +699,20 @@ a:hover {
 #tape-label1,
 #tape-label2,
 #tape-label3,
-#tape-label5 {
-    background-size: 300px 60px;
+#tape-label4,
+#tape-label5,
+#tape-label6,
+#tape-label7 {
     background-position: center;
-    background-repeat: no-repeat
-}
-
-#tape-label4 {
-    background-size: 300px 70px;
-    background-position: center;
-    background-repeat: no-repeat
+    background-repeat: no-repeat;
 }
 
 #tape-label1 {
     background-image: url("../images/tape/tape-straight-kraft3.png");
 }
 
-#tape-label2 {
+#tape-label2,
+#tape-label6 {
     background-image: url("../images/tape/tape-straight-cream1.png");
 }
 
@@ -693,13 +720,34 @@ a:hover {
     background-image: url("../images/tape/tape-straight-kraft2.png");
 }
 
-#tape-label4 {
+#tape-label4,
+#tape-label7 {
     background-image: url("../images/tape/tape-straight-cream2.png");
+    align-content: center;
+    display:grid;
 }
 
 #tape-label5 {
     background-image: url("../images/tape/tape-straight-kraft1.png");
 }
+
+#tape-label1,
+#tape-label2,
+#tape-label3,
+#tape-label5 {
+    background-size: 300px 60px;
+}
+
+#tape-label4 {
+    background-size: 300px 70px;
+}
+
+#tape-label6,
+#tape-label7 {
+    background-size: 280px 80px;
+}
+
+
 
 
 .pinback-button-scale {
@@ -870,8 +918,7 @@ a:hover {
 
 /*Adapted from https://codepen.io/teddyzetterlund/pen/YPjEzP*/
 .card {
-    background-image:
-        linear-gradient(180deg, var(--bee-wings) 3.9rem, var(--blue) calc(1rem), var(--blue) calc(4.1rem), transparent 1px), repeating-linear-gradient(0deg, var(--bee-wings), var(--bee-wings) 1.5rem, var(--blue) 1px, var(--blue) calc(1.5rem + 1.5px));
+    background-image: linear-gradient(180deg, var(--bee-wings) 3.9rem, var(--blue) calc(1rem), var(--blue) calc(4.1rem), transparent 1px), repeating-linear-gradient(0deg, var(--bee-wings), var(--bee-wings) 1.5rem, var(--blue) 1px, var(--blue) calc(1.5rem + 1.5px));
     box-shadow: 0 10px 10px 2px rgba(0, 0, 0, 0.3);
     height: 12rem;
     margin: auto;
@@ -970,7 +1017,7 @@ input[type="checkbox"]:checked {
 /* On hover, add a black background color with a little bit see-through */
 .prev:hover,
 .next:hover {
-    color: var(--bee-wings);
+    color: var(--yellow);
     cursor: pointer;
 }
 
@@ -1532,6 +1579,10 @@ a {
     }
 
 
+    #zine-parent {
+        max-width: 850px;
+    }
+
     .tabs li a,
     .tabs .active li a {
         padding: 10px;
@@ -1540,12 +1591,6 @@ a {
     .tabs .active a,
     .tabs li a:hover {
         padding: 15px 10px;
-    }
-
-    #project-parent {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 100px;
     }
 
     #portfolio-parent {
@@ -1631,8 +1676,6 @@ a {
     #bee {
         height: 60px;
     }
-
-
 }
 
 @media screen and (max-width: 1000px) {
@@ -1783,7 +1826,6 @@ a {
     }
 
     #project-parent {
-        grid-template-columns: 1fr;
         gap: 100px;
         z-index: 1;
         position: relative;
@@ -1797,11 +1839,20 @@ a {
         max-width: 500px;
     }
 
+    #zine-parent {
+        max-width: 450px;
+    }
+
     #tape-label1,
     #tape-label2,
     #tape-label3,
     #tape-label5 {
         background-size: 190px 75px;
+    }
+
+    #tape-label6,
+    #tape-label7 {
+        background-size: 180px 80px;
     }
 
     #more-info-grid #tape-label2,
